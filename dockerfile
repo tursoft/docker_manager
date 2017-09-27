@@ -24,7 +24,7 @@ ENV TRSFT_DOCKER_SERVERS '[ { "id": "localhost", "name":"localhost", "serverIp":
 #RUN mkdir /usr/src/app
 # Install app dependencies
 #COPY package.json .
-COPY ./ /usr/src/app
+COPY ./src/ /usr/src/app
 # For npm@5 or later, copy package-lock.json as well
 # COPY package.json package-lock.json ./
 
