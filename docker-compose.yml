@@ -1,0 +1,13 @@
+version: '2'
+
+services: 
+  docker_manager:
+    container_name: "docker_manager"
+    image: "tursoft/docker_manager:1.0"
+    build: .    
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+    ports:
+      - "8090:8090"
+    environment:
+      TRSFT_DOCKER_SERVERS:  "${TRSFT_DOCKER_SERVERS}"

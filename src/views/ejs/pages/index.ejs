@@ -1,0 +1,75 @@
+<!-- START WORK DESIGN AREA -->
+<div class="row" style="background-color:#dfdfdf; padding-top:10px;">
+    <div class="col-sm-12">
+        <div class="section-title">
+            <img src="/assets/images/logos/logo.small.png" width="150px" style="max-width:150px;">
+            <h2 >Docker Endpoints</h2>
+            <span style="color:#0089b6;">by tursoft</span>
+        </div>
+    </div>
+</div>
+                
+		<section id="portfolio" class="work section-padding">
+			<div class="container">				
+				
+				<div class="row">
+					<ul class="work">
+						<li class="filter" data-filter="all">All</li>
+						<% data.servers.forEach(function(server) { %>							
+							<li class="filter" data-filter=".<%=server.server.id%>"><%=server.server.name%></li>
+						<% }); %>
+					</ul>
+				</div>
+
+				<div class="work-inner">
+					<div class="row work-posts">
+                        <% data.servers.forEach(function(server) { %>	
+                            <% server.ports.forEach(function(port) { %>
+                                <!-- START SINGLE WORK DESIGN AREA -->
+                                <div class="col-md-2 col-sm-2 mix <%=server.server.id%>">
+                                    <div class="item">
+                                        <img src="<%=assets.getAppIcon(port.privatePort, port['containerName'])%>" alt="<%=port['containerName'] + ':' + port['publicPort']%>" style="max-width:200px; max-height:200px;">
+                                        <center><span><%=port['containerName'] + ':' + port['publicPort']%></span></center>
+                                        <div class="tooltip">
+                                            <div class="align">
+                                                <a href="#"><i class="fa fa-link"></i></a>
+                                                <a href="<%=port.link%>" target="_blank"><i class="fa fa-search"></i></a>
+                                                <h3><%=port['containerName'] + ':' + port['publicPort']%></h3>
+                                            </div>    
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END SINGLE WORK DESIGN AREA -->
+                            <% }); %>
+                        <% }); %>
+					</div>
+				</div>
+			</div>
+		</section>
+        <!-- / END START WORK DESIGN AREA -->
+     
+
+<% if (data.config.shared.showDebug=='true') { %>
+<div>
+    <strong>config</strong>
+    <pre>
+        <%=JSON.stringify(data.config, null, '\t')%>
+    </pre>
+</div>    
+
+<div>
+    <strong>servers</strong>
+    <pre>
+        <%=JSON.stringify(data.servers, null, '\t')%>
+    </pre>
+</div>  
+<% } %>
+
+<div class="row" style="background-color:#dfdfdf; padding-top:10px;">
+    <div class="col-sm-12">
+        <div class="section-title">
+            <span style="color:#0089b6;">© 2017 tursoft, Inc </span><br/>
+            <a href="http://tursoft.net" target="_blank">tursoft.net</a>
+        </div>
+    </div>
+</div>

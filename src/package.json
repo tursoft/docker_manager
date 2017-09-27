@@ -1,0 +1,36 @@
+{
+  "name": "docker_manager",
+  "version": "1.0.0",
+  "description": "Docker Endpoint Browser",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "docker",
+    "management",
+    "browse",
+    "endpoints",
+    "tursoft"
+  ],
+  "author": "Muhammet TURŞAK",
+  "license": "MIT",
+  "devDependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "express-generator": "^4.15.0",
+    "jade": "^1.11.0",
+    "mongoose": "^4.11.6",
+    "morgan": "^1.8.2",
+    "node-restful": "^0.2.6",
+    "nodemon": "^1.11.0",
+    "serve-favicon": "^2.4.3"
+  },
+  "dependencies": {
+    "dateformat": "^2.0.0",
+    "dockerode": "^2.5.1",
+    "error-page": "0.0.7",
+    "express-ejs-layouts": "^2.3.1",
+    "moment": "^2.18.1"
+  }
+}
