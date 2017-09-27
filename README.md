@@ -17,7 +17,7 @@ https://www.ivankrizsan.se/2016/05/18/enabling-docker-remote-api-on-ubuntu-16-04
 
 **Docker Run Sample:**
 ```
-docker run --name docker_manager -d -p 8090:8090 -v "/var/run/docker.sock:/var/run/docker.sock" tursoft/docker_manager:1.0
+docker run --name docker_manager -d -p 8090:8090 -v "/var/run/docker.sock:/var/run/docker.sock" tursoft/docker_manager:latest
 ```
 
 **Docker Compose Sample:**
