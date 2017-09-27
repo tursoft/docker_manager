@@ -5,4 +5,4 @@ Docker Manager currently supports docker endpoint browsing
 
 
 # Screeshoots
-![Screenshoot-General](https://raw.githubusercontent.com/tursoft/docker.manager/master/assets/screenshoots/general.jpg)
+![Screenshoot-General](https://raw.githubusercontent.com/tursoft/docker.manager/master/assets/screenshoots/list.jpg)
