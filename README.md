@@ -1,5 +1,9 @@
 ![Logo](https://raw.githubusercontent.com/tursoft/docker.manager/master/assets/logos/logo.small.png)
 
+**Docker Manager**
+https://tursoft.github.io/docker_manager/
+https://hub.docker.com/r/tursoft/docker_manager/
+
 **Docker Manager** is an interface to browse running endpoints exposed over public ports to outside.
 It can be used to browse only local docker or it can be also used to browse multiple remote docker instances.
 
