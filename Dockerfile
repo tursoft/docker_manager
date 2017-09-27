@@ -33,5 +33,7 @@ ADD ./src/package.json /tmp/package.json
 RUN cd /tmp && npm install
 RUN cp -a /tmp/node_modules /usr/src/app/
 
+WORKDIR /usr/src/app
+
 # start app ==================
 CMD [ "npm", "start", "server.js" ]
