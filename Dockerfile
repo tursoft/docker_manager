@@ -21,7 +21,7 @@ VOLUME ["/usr/src/app"]
 
 ENV TRSFT_DOCKER_SERVERS '[ { "id": "localhost", "name":"localhost", "serverIp": "localhost", "apiPort":"4243" } ]'
 
-COPY ./src/ /usr/src/app
+COPY ./src /usr/src/app
 
 RUN npm install
 
