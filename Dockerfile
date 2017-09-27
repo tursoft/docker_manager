@@ -21,13 +21,8 @@ VOLUME ["/usr/src/app"]
 
 ENV TRSFT_DOCKER_SERVERS '[ { "id": "localhost", "name":"localhost", "serverIp": "localhost", "apiPort":"4243" } ]'
 
-#RUN mkdir /usr/src/app
-# Install app dependencies
-#COPY package.json .
 COPY ./src/ /usr/src/app
-# For npm@5 or later, copy package-lock.json as well
-# COPY package.json package-lock.json ./
 
- #RUN npm install
+RUN npm install
 
 CMD [ "npm", "start", "server.js" ]
