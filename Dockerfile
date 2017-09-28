@@ -27,13 +27,21 @@ ENV TRSFT_DOCKER_SERVERS '[ { "id": "localhost", "name":"localhost", "serverIp":
 # copy node app to image ==================
 COPY ./src /usr/src/app
 
+RUN echo "copy operation of app folder completed"
+
+RUN ls -la
+
 
 # restore npm modules ==================
 ADD ./src/package.json /tmp/package.json
 RUN cd /tmp && npm install
 RUN cp -a /tmp/node_modules /usr/src/app/
 
+RUN echo "copy operation of node_modules folder completed"
+RUN ls -la
+
 WORKDIR /usr/src/app
 
 # start app ==================
+RUN echo "starting the application"
 CMD [ "npm", "start", "server.js" ]
