@@ -1,2 +1,2 @@
-*.bat
-*-lock.json
+**/*.bat
+**/*-lock.json
